@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billionaire-Dairy</title>
+    <style>
+        body {
+            max-width: 1340px;
+
+        }
+    </style>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="mx-auto">
+    <header class="my-16 border-2 border-blue-950">
+        <div class="grid grid-cols-4">
+            <section class=" bg-blue-950 grid py-9 px-10  gap-5">
+                <h2 class="text-white text-2xl text-center my-4"> <span class="font-bold">BILLIONAIRE</span><br> DIARY
+                </h2>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Add a User</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Double
+                    Money</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Short By
+                    Rank</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Calculate Entire
+                    Wealth</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Show All
+                    Billionaires</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Richest By
+                    Industry</button>
+                <button class=" py-2 font-bold text-xl hover:bg-gray-300 bg-slate-100 text-blue-950">Richest By
+                    State</button>
+            </section>
+            <section class="col-span-3 grid">
+                <div class="p-7">
+                    <input type="text" class="text-xl border-b-2 py-2 border-slate-500" placeholder="Search">
+                </div>
+                <div class="bg-slate-200 p-7">
+                    <h2 class="font-bold text-2xl py-10">Hello, User!</h2>
+                    <div class=" grid grid-cols-5 border-b-2 pb-5 border-slate-500">
+                        <h3 class="font-semibold text-2xl">Person</h3>
+                        <h3 class="font-semibold text-2xl">Citizenship</h3>
+                        <h3 class="font-semibold text-2xl">Industry</h3>
+                        <h3 class="font-semibold text-2xl">Rank</h3>
+                        <h3 class="font-semibold text-2xl">Wealth</h3>
+                    </div>
+                    <div class="  border-b-2 py-12 border-slate-500">
+                        <div id="person-div" >
+                            <!-- <div class="grid grid-cols-5">
+                                <button class="block text-xl text-left hover:text-blue-950 hover:font-semibold">Jeff Bezos</button>
+                            <p class="text-xl  ">United States</p>
+                            <p class="text-xl ">Telecom</p>
+                            <p class="text-xl ">12</p>
+                            <p class="text-xl "> $124317.31 </p>
+                            </div> -->
+                        </div>
+                        </div>
+                       
+                    <div class="grid grid-cols-5 pt-5 pb-20">
+                        <p class="text-xl font-bold col-span-4">Total</p>
+                        <p  class="text-xl col-span-1">$<span id="total-worth">0</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <main class="my-10 border-2 border-slate-400">
+        <h2 class="py-2 mt-7 text-center text-3xl font-semibold">Richest By Industry</h2>
+        <p class="py-2 mb-5 text-center">(Technology)</p>
+
+        <section class="p-8 bg-slate-200">
+            <div class=" grid grid-cols-3 gap-7">
+                
+                <div class="bg-blue-950 p-5 text-white">
+                    <h4 class="text-center font-semibold text-2xl pb-3">Jeff Bezos</h4>
+                    <div class="grid grid-cols-2 ">
+                        <div class=" border-e-2 pe-3">
+                            <img src="images/jeff.jpg" class="pb-2" alt="">
+                            <p> <span class="font-bold">Source : </span>Amazon</p>
+                        </div>
+                        <div class="p-3">
+                            <p><span class="text-lg font-bold">Citizenship : </span> US</p>
+                            <p><span class="text-lg font-bold">State : </span> Washing</p>
+                            <p><span class="text-lg font-bold">City : </span> Medina</p>
+                            <p><span class="text-lg font-bold">Total Shares : </span> 992634</p>
+                            <p><span class="text-lg font-bold">Share Price : </span> $99.8</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bg-blue-950 p-5 text-white">
+                    <h4 class="text-center font-semibold text-2xl pb-3">Jeff Bezos</h4>
+                    <div class="grid grid-cols-2 ">
+                        <div class=" border-e-2 pe-3">
+                            <img src="images/jeff.jpg" class="pb-2" alt="">
+                            <p> <span class="font-bold">Source : </span>Amazon</p>
+                        </div>
+                        <div class=" p-3 ">
+                            <p><span class="text-lg font-bold">Citizenship : </span> US</p>
+                            <p><span class="text-lg font-bold">State : </span> Washing</p>
+                            <p><span class="text-lg font-bold">City : </span> Medina</p>
+                            <p><span class="text-lg font-bold">Total Shares : </span> 992634</p>
+                            <p><span class="text-lg font-bold">Share Price : </span> $99.8</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="bg-blue-950 p-5 text-white">
+                    <h4 class="text-center font-semibold text-2xl pb-3">Jeff Bezos</h4>
+                    <div class="grid grid-cols-2 ">
+                        <div class=" border-e-2 pe-3">
+                            <img src="images/jeff.jpg" class="pb-2" alt="">
+                            <p> <span class="font-bold">Source : </span>Amazon</p>
+                        </div>
+                        <div class="p-3">
+                            <p><span class="text-lg font-bold">Citizenship : </span> US</p>
+                            <p><span class="text-lg font-bold">State : </span> Washing</p>
+                            <p><span class="text-lg font-bold">City : </span> Medina</p>
+                            <p><span class="text-lg font-bold">Total Shares : </span> 992634</p>
+                            <p><span class="text-lg font-bold">Share Price : </span> $99.8</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <button class="bg-blue-950 text-white text-2xl font-semibold px-6 py-2 mt-12 text-center mx-auto flex ">Load
+                More</button>
+
+
+        </section>
+
+    </main>
+    <!-- script -->
+    <script src="js fiels/index.js"></script>
+</body>
+
+</html>
