@@ -12,7 +12,7 @@ fetch("https://forbes400.onrender.com/api/forbes400?limit=5")
       createPersonDiv.innerHTML = `
         <button class="block md:text-xl text-xs text-left hover:text-blue-950 hover:font-semibold">${personData.person.name}</button>
         <p class="md:text-xl text-xs md:mr-auto mx-auto">${personData.countryOfCitizenship}</p>
-        <p class="md:text-xl text-xs md:mx-auto ml-auto">${personData.industries}</p>
+        <p class="md:text-xl text-xs md:mx-auto text-center ml-auto">${personData.industries}</p>
         <p class="md:text-xl text-xs md:mx-auto mx-auto">${personData.position}</p>
         <p class="md:text-xl text-xs  mx-auto" > $${personData.finalWorth} </p>
         `;
