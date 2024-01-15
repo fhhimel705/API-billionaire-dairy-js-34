@@ -1,5 +1,5 @@
 
-fetch("https://forbes400.onrender.com/api/forbes400?limit=3")
+fetch("https://forbes400.onrender.com/api/forbes400?limit=5")
   .then((res) => res.json())
   .then((data) => {
     const personDiv = document.getElementById("person-div");
@@ -11,10 +11,10 @@ fetch("https://forbes400.onrender.com/api/forbes400?limit=3")
       createPersonDiv.classList.add("py-1");
       createPersonDiv.innerHTML = `
         <button class="block md:text-xl text-xs text-left hover:text-blue-950 hover:font-semibold">${personData.person.name}</button>
-        <p class="md:text-xl text-xs mx-auto">${personData.countryOfCitizenship}</p>
-        <p class="md:text-xl text-xs ms-auto">${personData.industries}</p>
-        <p class="md:text-xl text-xs mx-auto">${personData.position}</p>
-        <p class="md:text-xl text-xs"> $${personData.finalWorth} </p>
+        <p class="md:text-xl text-xs md:mr-auto mx-auto">${personData.countryOfCitizenship}</p>
+        <p class="md:text-xl text-xs md:mx-auto ml-auto">${personData.industries}</p>
+        <p class="md:text-xl text-xs md:mx-auto mx-auto">${personData.position}</p>
+        <p class="md:text-xl text-xs  mx-auto" > $${personData.finalWorth} </p>
         `;
       personDiv.appendChild(createPersonDiv);
     });
