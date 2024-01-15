@@ -17,17 +17,29 @@ const showPersonData = (limit) => {
       BillionaireDiv.innerText = "";
       showLoading(true);
 
-      data.forEach((personData) => {
+      data.forEach((personData , index) => {
         const createPersonDiv = document.createElement("div");
         createPersonDiv.classList.add("grid");
         createPersonDiv.classList.add("grid-cols-5");
         createPersonDiv.classList.add("py-1");
         createPersonDiv.innerHTML = `
-          <button class="block md:text-xl text-xs text-left hover:text-blue-950 hover:font-semibold">${personData.person.name}</button>
+          <button onclick="my_modal_${index}.showModal()" class="block md:text-xl text-xs text-left hover:text-blue-950 hover:font-semibold">${personData.person.name}</button>
           <p class="md:text-xl text-xs md:mr-auto mx-auto">${personData.countryOfCitizenship}</p>
           <p class="md:text-xl text-xs md:mx-auto text-center ml-auto">${personData.industries}</p>
           <p class="md:text-xl text-xs md:mx-auto mx-auto">${personData.position}</p>
           <p class="md:text-xl text-xs  mx-auto" > $${personData.finalWorth} </p>
+          <dialog id="my_modal_${index}" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">hello</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">  
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
           `;
         personDiv.appendChild(createPersonDiv);
 
